@@ -4,12 +4,14 @@
 import os
 import Mgr
 import requests
+import time
 
 class UrlDownLoad(object):
 	def __init__(self):
 		pass
 
 	def downFile(self, url, path):
+		t1 = time.time()
 		if os.path.exists(path):
 			return True
 		
@@ -26,6 +28,7 @@ class UrlDownLoad(object):
 		with open (path,'wb') as f:
 			f.write(response.content)
 			
+		t2 = time.time()
 		return True
 	
 	def downStr(self, url):
@@ -40,9 +43,8 @@ class UrlDownLoad(object):
 			return None
 		
 		strings = response.content
-		strings = strings.decode('gbk')
-		strings = strings.encode("utf-8")
-		strings = strings.split('\n')
+		#strings = strings.decode('gbk')
+		#strings = strings.encode("utf-8")
 		return strings
 
 Mgr.UrlDownLoad = UrlDownLoad()

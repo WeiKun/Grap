@@ -9,6 +9,7 @@ UrlParse = None     #object
 UrlDownLoad = None  #object
 DirDownLoad = None  #type
 
-MAX_FAIL_URL_NUM = 2
+MAX_FAIL_URL_NUM = 200
 MAX_FAIL_URL_TIMES = 10
-HTTP_TIMEOUT = 10
+HTTP_TIMEOUT = 60
+DOWNLOADS_SLEEP = 10

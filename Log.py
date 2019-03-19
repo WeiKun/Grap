@@ -8,6 +8,7 @@ class Log(object):
         pass
 
     def Log(self, string, needmark=True):
-        print string
+        #print string
+        pass
 
 Mgr.LogEntity = Log()
