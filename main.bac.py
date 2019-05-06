@@ -32,7 +32,7 @@ class UrlParse(object):
 		node = soup.find('title')
 		dirName = node.get_text()
 		if '翻訳' in dirName:
-			dirName = dirName[:dirName.find('翻訳')]
+    			dirName = dirName[:dirName.find('翻訳')]
 			dirName = dirName[:dirName.rfind('[')]
 		elif '汉化' in dirName:
 			dirName = dirName[:dirName.find('汉化')]

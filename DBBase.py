@@ -13,5 +13,5 @@ class DBBase(object):
         return False
 
     def CompleteDirName(self, dirName):
-        print 'CompleteDirName %s' % (dirName, )
+        print ('CompleteDirName %s' % (dirName, ))
 

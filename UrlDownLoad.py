@@ -3,7 +3,7 @@
 # Created Time: Thu 07 Mar 2019 06:12:38 PM CST
 import os
 import Mgr
-import requests
+# import requests
 import time
 
 class UrlDownLoad(object):
@@ -11,7 +11,7 @@ class UrlDownLoad(object):
 		pass
 
 	def downFile(self, url, path):
-		t1 = time.time()
+		# t1 = time.time()
 		if os.path.exists(path):
 			return True
 		
@@ -28,7 +28,7 @@ class UrlDownLoad(object):
 		with open (path,'wb') as f:
 			f.write(response.content)
 			
-		t2 = time.time()
+		# t2 = time.time()
 		return True
 	
 	def downStr(self, url):
